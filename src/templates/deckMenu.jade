@@ -1,0 +1,5 @@
+div.deck-menu
+	h2 Choose a Deck:
+	| {{#each decks}}
+	div.deck(on-click="openBoard:{{name}}") {{name}}
+	| {{/each}}

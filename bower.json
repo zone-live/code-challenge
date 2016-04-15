@@ -1,0 +1,14 @@
+{
+	"name": "coding-challenge-js",
+	"version": "1.3.3",
+	"main": "app/index.js",
+	"dependencies": {
+		"requirejs": "~2.2.0",
+		"requirejs-text": "~2.0.14",
+		"jquery": "~2.2.3",
+		"lodash": "~4.9.0",
+		"backbone": "~1.3.3",
+		"bootstrap": "~3.3.6"
+	},
+	"devDependencies": {}
+}

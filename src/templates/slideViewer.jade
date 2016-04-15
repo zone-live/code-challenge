@@ -1,0 +1,25 @@
+section.slides-viewer
+	div.slides-viewer-header
+		h4 Awesome Slider
+	{{#if slideItems}}
+	div.slides-viewer-content
+		| {{#each slideItems}}
+		div.slide-item
+			| {{#if type === slideTypes.PARAGRAPH}}
+			p {{{value}}}
+			| {{elseif type === slideTypes.IMAGE}}
+			img(src="{{value}}" align="left")
+			| {{elseif type === slideTypes.HEADING}}
+			h4 {{value}}
+			| {{/if}}
+		| {{/each}}
+	{{/if}}
+	div.slides-viewer-footer
+		a.prev.button(on-click="prevClicked")
+			i.fa.fa-chevron-left(aria-hidden="true")
+			| prev
+		a.next.button(on-click="nextClicked")
+			| next
+			i.fa.fa-chevron-right(aria-hidden="true")
+
+	a(href="/#stats/{{deckName}}") View Statistics
